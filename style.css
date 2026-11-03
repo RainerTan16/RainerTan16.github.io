@@ -29,7 +29,7 @@ a{color:inherit}
 /* PHOTO */
 .photo-wrap{position:relative;justify-self:center;width:min(320px,70vw);aspect-ratio:1;display:grid;place-items:center;color:var(--accent)}
 .ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 60s linear infinite}
-.photo-wrap img,.fallback{width:82%;aspect-ratio:1;border-radius:50%;object-fit:cover;background:var(--panel)}
+.photo-wrap img,.fallback{width:82%;height:auto;aspect-ratio:1/1;border-radius:50%;object-fit:cover;object-position:50% 20%;background:var(--panel)}
 .fallback{display:grid;place-items:center;font-size:3rem;font-weight:700}
 [hidden]{display:none!important}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -74,17 +74,25 @@ input,textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--line);borde
 
 /* PHONE */
 @media (max-width:760px){
-  html{scroll-padding-top:110px}
-  .nav{padding:.5rem 1rem;gap:.4rem}
-  .nav nav{width:100%;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .nav nav a{padding:.5rem .8rem;white-space:nowrap}
-  .hero{grid-template-columns:1fr;gap:1.5rem;padding-top:2rem}
-  .photo-wrap{order:-1;width:min(260px,65vw)}
+  html{scroll-padding-top:60px}
+  body{overflow-x:hidden}
+  .nav{padding:.4rem .5rem}
+  .brand{display:none}
+  .nav nav{width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  .nav nav::-webkit-scrollbar{display:none}
+  .nav nav a{padding:.5rem .4rem;font-size:.68rem;white-space:nowrap}
+  .nav nav a:first-child{margin-left:auto}
+  .nav nav a:last-child{margin-right:auto}
+  .hero{grid-template-columns:minmax(0,1fr);gap:1.2rem;min-height:0;padding:1.5rem 1.25rem 8.5rem;text-align:center}
+  .hero>*{min-width:0}
+  .hero h1{font-size:1.5rem;overflow-wrap:anywhere}
+  .photo-wrap{order:-1;width:min(240px,62vw)}
+  .summary{margin-left:auto;margin-right:auto;font-size:.88rem}
+  .actions{justify-content:center}
   .entry{grid-template-columns:1fr;gap:.2rem}
   .block{padding-top:3rem}
   .card summary{padding:1rem}
   .repo-link{margin-left:1.1rem}
 }
-
 /* REDUCED MOTION */
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ring,.track{animation:none}.track{flex-wrap:wrap;width:auto;padding:0 1rem}.marquee{position:static}.hero{padding-bottom:0}}
