@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Rainer Joseph B. Tan | Desktop Application Developer</title>
+<meta name="description" content="Portfolio ni Rainer Joseph B. Tan, IT student at desktop application developer (VB.NET, MySQL).">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#top" aria-label="Rainer Tan - home"><svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 9 4 16l7 7M21 9l7 7-7 7"/></svg><span></span></a>
+  <nav aria-label="Main">
+    <a href="#stack" data-i18n="nSkill">SKILL</a>
+    <a href="#career" data-i18n="nCareer">EXPERIENCE</a>
+    <a href="#education" data-i18n="nEdu">EDUCATION</a>
+    <a href="#projects" data-i18n="nProj">PROJECTS</a>
+    <a href="#contact" data-i18n="nContact">CONTACT</a>
+    
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-text">
+    <h1 data-i18n="greet">Hi, I'm Rainer Joseph B. Tan</h1>
+    <p class="role" data-i18n="role">Desktop Application Developer</p>
+    <p class="summary" data-i18n="summary">Information Technology student with experience in desktop application development and applicant interviewing. Passionate about developing software and continuously improving technical and problem-solving skills.</p>
+    <div class="actions">
+      <a class="btn" href="#contact" data-i18n="cta">Contact Me</a>
+      <a class="icon-btn" href="assets/resume.pdf" download="Rainer-Tan-Resume.pdf" aria-label="Download resume (PDF)" title="Resume"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></a>      
+    </div>
+  </div>
+  <div class="photo-wrap">
+    <svg class="ring" viewBox="0 0 300 300" aria-hidden="true"><circle cx="150" cy="150" r="144" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="46 30" stroke-linecap="round"/></svg>
+    <!-- PALITAN: ilagay ang picture mo sa assets/profile.jpg -->
+    <img id="photo" src="Photo.jpg" alt="Error" width="260" height="260">
+    <div id="photo-fallback" class="fallback" hidden>RT</div>
+  </div>
+  <div class="marquee" id="stack" aria-label="Skills and tools">
+    <ul class="track">
+      <li><span class="logo b-vb">VB</span>VB.NET</li>
+      <li><span class="logo b-vs">VS</span>Visual Studio</li>
+      <li><span class="logo b-sql">SQL</span>MySQL</li>
+      <li><span class="logo b-qa">QA</span>System Testing</li>
+      <li><span class="logo b-ui">UI</span>UI Design</li>
+      <li><span class="logo b-cv">Cv</span>Canva</li>
+      <li><span class="logo b-pp">P</span>PowerPoint</li>
+      <li><span class="logo b-xl">X</span>Excel</li>
+      <li><span class="logo b-wd">W</span>Word</li>
+    </ul>
+  </div>
+</section>
+
+<section id="career" class="block">
+  <h2 data-i18n="hCareer">Experience</h2>
+  <article class="entry">
+    <div class="when">2023 - 2026</div>
+    <div>
+      <h3>SPES</h3>
+      <p class="muted" data-i18n="spes">Seasonal employment (1 month annually), Calamba City</p>
+      <ul>
+        <li>Conducted face-to-face interviews with applicants.</li>
+        <li>Collected and recorded applicant information during interviews.</li>
+        <li>Gave instructions and answered basic inquiries from applicants.</li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<section id="education" class="block">
+  <h2 data-i18n="hEdu">Education</h2>
+  <article class="entry"><div class="when">2022 - 2026</div><div><h3>Bachelor of Science in Information Technology</h3><p class="muted">PWU-CDCEC, Brgy Uno, Calamba City</p></div></article>
+  <p class="award"><strong data-i18n="award">Award:</strong> Service Award</p>
+</section>
+
+<section id="projects" class="block">
+  <h2 data-i18n="hProj">Projects</h2>
+  <div class="projects">
+    <details class="card"><summary><span>Desktop-Based Kiosk System</span><em>2022</em></summary><ul>
+      <li>Planned, designed, and developed the entire kiosk system as lead programmer.</li>
+      <li>Designed the user interface and implemented the core functions.</li>
+      <li>Managed the database for efficient data storage.</li>
+      <li>Tested the system before final system testing.</li></ul>
+       <a class="repo-link" href="https://github.com/RainerTan16/Desktop-Based-Kiosk-System-2022" target="_blank" rel="noopener noreferrer">View on GitHub</a></details>
+    </details>
+    <details class="card"><summary><span>Desktop-Based School System</span><em>2023</em></summary><ul>
+      <li>Led the planning, design, and development of the school management system.</li>
+      <li>Built the user interface and key system features.</li>
+      <li>Stored and organized school records.</li>
+      <li>Debugged system issues.</li></ul></details>
+    <details class="card"><summary><span>Desktop-Based Voting System</span><em>2023</em></summary><ul>
+      <li>Developed the voting system and its core functions.</li>
+      <li>Created the user interface.</li>
+      <li>Created and managed the database for storing voting information securely.</li>
+      <li>Tested and debugged the application.</li></ul></details>
+    <details class="card"><summary><span>Text-Based Console Game</span><em>2023</em></summary><ul>
+      <li>Developed the game logic, mechanics, and program flow.</li>
+      <li>Implemented core gameplay features and fixed bugs through debugging.</li>
+      <li>Ran functionality testing to improve gameplay and system stability.</li></ul></details>
+    <details class="card"><summary><span>Desktop-Based Ordering System</span><em>2024</em></summary><ul>
+      <li>Designed and developed the ordering system from planning to implementation.</li>
+      <li>Created the user interface, picked visual assets, and built the features.</li>
+      <li>Stored orders and related records.</li>
+      <li>Made sure the system runs reliably.</li></ul></details>
+  </div>
+</section>
+
+<section id="contact" class="block">
+  <h2 data-i18n="hContact">Contact</h2>
+  <div class="contact">
+    <form id="contact-form" novalidate>
+      <h3>Phone Number: 09949325055</h3>
+      <h3>Email: tanrainjoseph92@gmail.com</h3>      
+    </form>
+  </div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
