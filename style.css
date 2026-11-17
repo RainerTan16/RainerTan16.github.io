@@ -57,12 +57,13 @@ a{color:inherit}
 /* PROJECTS */
 .projects{display:grid;gap:.8rem}
 .card{border:1px solid var(--line);border-radius:8px;background:var(--panel)}
-.card summary{display:flex;justify-content:space-between;gap:1rem;padding:.9rem 1.1rem;cursor:pointer;font-weight:700}
+.card summary{display:flex;align-items:center;gap:1rem;padding:.8rem 1.1rem;cursor:pointer;font-weight:700}
+.card summary span{flex:1;min-width:0}
 .card summary em{color:var(--muted);font-style:normal;font-weight:400}
 .card summary:hover{color:var(--accent)}
 .card[open]{border-color:var(--accent)}
-.card ul{padding:0 1.1rem 1rem 2.2rem}
-.repo-link{display:inline-block;margin:0 1.1rem 1.1rem 2.2rem;padding:.45rem .9rem;border:1px solid var(--accent);border-radius:6px;color:var(--accent);font-size:.85rem;font-weight:700;text-decoration:none}
+.card ul{padding:0 1.1rem 1rem 2.2rem;margin:0}
+.repo-link{display:inline-block;margin:0;padding:.4rem .9rem;border:1px solid var(--accent);border-radius:6px;color:var(--accent);font-size:.85rem;font-weight:700;text-decoration:none;white-space:nowrap}
 .repo-link:hover{background:var(--accent);color:#1a1204}
 
 /* CONTACT */
@@ -74,13 +75,13 @@ input,textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--line);borde
 
 /* PHONE */
 @media (max-width:760px){
-  html{scroll-padding-top:60px}
+  html{scroll-padding-top:70px}
   body{overflow-x:hidden}
   .nav{padding:.4rem .5rem}
   .brand{display:none}
   .nav nav{width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
   .nav nav::-webkit-scrollbar{display:none}
-  .nav nav a{padding:.5rem .4rem;font-size:.68rem;white-space:nowrap}
+  .nav nav a{padding:.8rem .4rem;font-size:.68rem;white-space:nowrap}
   .nav nav a:first-child{margin-left:auto}
   .nav nav a:last-child{margin-right:auto}
   .hero{grid-template-columns:minmax(0,1fr);gap:1.2rem;min-height:0;padding:1.5rem 1.25rem 8.5rem;text-align:center}
@@ -91,8 +92,12 @@ input,textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--line);borde
   .actions{justify-content:center}
   .entry{grid-template-columns:1fr;gap:.2rem}
   .block{padding-top:3rem}
-  .card summary{padding:1rem}
-  .repo-link{margin-left:1.1rem}
+
+  /* Project cards sa phone */
+  .card summary{display:grid;grid-template-columns:1fr auto;gap:.6rem .8rem;align-items:center;padding:.9rem 1rem}
+  .card summary span{grid-column:1;grid-row:1;min-width:0}
+  .card summary em{grid-column:2;grid-row:1}
+  .card summary .repo-link{grid-column:1 / -1;grid-row:2;text-align:center;padding:.7rem 1rem;white-space:normal}
 }
 /* REDUCED MOTION */
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ring,.track{animation:none}.track{flex-wrap:wrap;width:auto;padding:0 1rem}.marquee{position:static}.hero{padding-bottom:0}}
